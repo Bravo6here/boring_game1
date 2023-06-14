@@ -10,16 +10,16 @@ clock = pygame.time.Clock()
 fps = 60
 lets_continue = True
 score = 0
-collision = pygame.mixer.Sound(R"C:\Users\Jan - Hall 3000\Desktop\Pythonus\Pygame\game1\boring_game1\y2mate.com - Impactcollision sound effect HD.mp3")
+collision = pygame.mixer.Sound(R"boring_game1\Untitled.mp3")
 is_ai = False
 is_x = False
 is_y = False
 # Player image
-plimg = pygame.image.load(R"C:\Users\Jan - Hall 3000\Desktop\Pythonus\Pygame\game1\boring_game1\man.png")
+plimg = pygame.image.load(R"boring_game1\man.png")
 plimg_rect = plimg.get_rect()
 plimg_rect.center = (width / 2, height / 2)
 # Starcoin image
-stimg = pygame.image.load(R"C:\Users\Jan - Hall 3000\Desktop\Pythonus\Pygame\game1\boring_game1\star.png")
+stimg = pygame.image.load(R"boring_game1\star.png")
 stimg_rect = stimg.get_rect()
 stimg_rect.center = (width // 2 - 100, height // 2)
 # Main loop
