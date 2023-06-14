@@ -44,7 +44,7 @@ while lets_continue:
                 is_y = False
             else:
                 is_ai = True
-
+    # AI algorithm
     if is_ai == True:
         if is_x == False:
             if plimg_rect.centerx > stimg_rect.centerx + 10:
