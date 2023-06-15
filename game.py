@@ -29,22 +29,22 @@ while lets_continue:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             lets_continue = False
-        key = pygame.key.get_pressed()
-        if (key[pygame.K_UP] or key[pygame.K_w]) and plimg_rect.centery > 80:
-            plimg_rect.centery -= 10
-        elif (key[pygame.K_DOWN] or key[pygame.K_s]) and plimg_rect.centery < height - 40:
-            plimg_rect.centery += 10
-        elif (key[pygame.K_LEFT] or key[pygame.K_a]) and plimg_rect.centerx > 20:
-            plimg_rect.centerx -= 10
-        elif (key[pygame.K_RIGHT] or key[pygame.K_d]) and plimg_rect.centerx < width - 30:
-            plimg_rect.centerx += 10
-        elif key[pygame.K_q]:
-            if is_ai == True:
-                is_ai = False
-                is_x = False
-                is_y = False
-            else:
-                is_ai = True
+    key = pygame.key.get_pressed()
+    if (key[pygame.K_UP] or key[pygame.K_w]) and plimg_rect.centery > 80:
+        plimg_rect.centery -= 10
+    elif (key[pygame.K_DOWN] or key[pygame.K_s]) and plimg_rect.centery < height - 40:
+        plimg_rect.centery += 10
+    elif (key[pygame.K_LEFT] or key[pygame.K_a]) and plimg_rect.centerx > 20:
+        plimg_rect.centerx -= 10
+    elif (key[pygame.K_RIGHT] or key[pygame.K_d]) and plimg_rect.centerx < width - 30:
+        plimg_rect.centerx += 10
+    elif key[pygame.K_q]:
+        if is_ai == True:
+            is_ai = False
+            is_x = False
+            is_y = False
+        else:
+            is_ai = True
     # AI algorithm
     if is_ai == True:
         if is_x == False:
