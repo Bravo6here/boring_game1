@@ -10,18 +10,19 @@ clock = pygame.time.Clock()
 fps = 60
 lets_continue = True
 score = 0
-collision = pygame.mixer.Sound(R"boring_game1\Untitled.mp3")
+collision = pygame.mixer.Sound(R"C:\Users\Jan - Hall 3000\Desktop\Pythonus\Pygame\game1\boring_game1\Untitled.mp3")
 is_ai = False
 is_x = False
 is_y = False
 # Player image
-plimg = pygame.image.load(R"boring_game1\man.png")
+plimg = pygame.image.load(R"C:\Users\Jan - Hall 3000\Desktop\Pythonus\Pygame\game1\boring_game1\man.png")
 plimg_rect = plimg.get_rect()
 plimg_rect.center = (width / 2, height / 2)
 # Starcoin image
-stimg = pygame.image.load(R"boring_game1\star.png")
+stimg = pygame.image.load(R"C:\Users\Jan - Hall 3000\Desktop\Pythonus\Pygame\game1\boring_game1\star.png")
 stimg_rect = stimg.get_rect()
 stimg_rect.center = (width // 2 - 100, height // 2)
+    
 # Main loop
 while lets_continue:
     # Checking for quiting and key pressing
@@ -63,8 +64,12 @@ while lets_continue:
 
     # Collision with starcoin
     if plimg_rect.colliderect(stimg_rect):
-        stimg_rect.x = random.randrange(30, 580, 10)
-        stimg_rect.y = random.randrange(80, 280, 10)
+        continue_coll_func = True
+        while continue_coll_func:
+            stimg_rect.x = random.randrange(30, 580, 10)
+            stimg_rect.y = random.randrange(80, 280, 10)
+            if abs(stimg_rect.centerx - plimg_rect.centerx) > 30 and abs(stimg_rect.centery - plimg_rect.centery) > 30:
+                continue_coll_func = False        
         score += 1
         collision.play()
         is_x = False
