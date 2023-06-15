@@ -22,6 +22,4 @@ Q = Turning on/off autoplay AI
 
 Note:
 
-Holding key works on WSAD only. Holding arrows does not work. 
-
-If you press Q and Ai will not start try hoding Q. If you hold Q for a long time the AI will start switching between on and off and AIs movement be slow and strange.
+I If you hold Q the AI will start switching between on and off and AIs movement be slow and strange. Also pressing movement keys while AI is running will resoult into AI having different speed or not being as accurate and in rare cases AI can miss starcoin entirely.
